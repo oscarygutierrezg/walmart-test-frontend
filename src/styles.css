@@ -1,0 +1,49 @@
+/*!
+ * Campaña Lider v2.0
+ * Copyright 2020
+ */
+
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ body{
+   background: #f3f3f3 !important;
+   border-bottom: 5px solid rgb(0, 113, 206);
+ }
+ .container-fluid{
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+ }
+
+
+
+ /*** MODULOS RESULTADO BÚSQUEDA ***/
+ .contenedor{
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+   padding: 0 15px;
+ }
+ .resultado-busqueda{
+   display: flex;
+   width: 70%;
+   float: right;
+   margin-bottom: 30px;
+ }
+ .resultado-busqueda > div {
+   height: auto;
+   width: 33%;
+   margin-right: 8px;
+ }
+
+ /*** PAGINACIÓN ***/
+ .paginacion{
+   width: 70%;
+   height: auto;
+   padding-top: 10px;
+   background: #fff;
+   overflow: hidden;
+   float: right;
+ }

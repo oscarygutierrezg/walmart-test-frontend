@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <app-header (textFinder)="findProducts($event)"></app-header>
+    <app-filter [text]="textValue"></app-filter>
+    <div *ngIf="pageResponse && pageResponse.content.length>0" class="contenedor">
+        <div class="resultado-busqueda">
+            <div *ngFor="let product of pageResponse.content">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+        <div class="paginacion">
+            <ngb-pagination *ngIf="pageResponse" [pageSize]="pageSize" [(page)]="page" [collectionSize]="pageResponse.totalElements" (pageChange)="onPageChange()" class="d-flex justify-content-center" [boundaryLinks]="true"></ngb-pagination>
+        </div>
+    </div>
+    <app-legal></app-legal>
+</div>
