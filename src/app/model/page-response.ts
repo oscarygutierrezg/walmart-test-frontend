@@ -2,7 +2,12 @@ import { Sort } from './sort';
 import { Product } from './product';
 import { Pageable } from './pageable';
 
-export interface PageResponse {
+export class PageResponse {
+
+  constructor(){
+
+  }
+  
   content: Product[];
   pageable: Pageable;
   totalElements: number;

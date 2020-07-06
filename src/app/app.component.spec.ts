@@ -3,6 +3,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './components/header/header.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { ProductComponent } from './components/product/product.component';
+import { LegalComponent } from './components/legal/legal.component';
+import { PricePipe } from './pipes/price.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,7 +18,12 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        HeaderComponent,
+        FilterComponent,
+        ProductComponent,
+        LegalComponent,
+        PricePipe
       ],
     }).compileComponents();
   }));

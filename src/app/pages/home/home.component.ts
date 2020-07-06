@@ -10,7 +10,7 @@ import { PageResponse } from 'src/app/model/page-response';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-    private _page = 100;
+    private _page = 1;
     private _pageSize = 3;
     public textValue;
     private productChangeObs: Subscription;
@@ -41,15 +41,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     findByText(text: string) {
-        this.productService.findByText(text, this.page - 1, this.pageSize).subscribe(f => {
-            console.log(JSON.stringify(f));
-        });
+        this.productService.findByText(text, this.page - 1, this.pageSize).subscribe();
     }
 
     findById(id: number) {
-        this.productService.findById(id).subscribe(f => {
-            console.log(JSON.stringify(f));
-        });
+        this.productService.findById(id).subscribe();
     }
 
     public onPageChange(): void {
