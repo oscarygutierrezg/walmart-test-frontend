@@ -1,0 +1,16 @@
+<div>
+  <div class="foto">
+      <img src="https://{{product.image}}" alt="Girl in a jacket" width="auto" height="auto">
+  </div>
+  <div class="info">
+      <div class="marca">{{product.brand}} <span>{{product.description}}</span></div>
+      <div class="precio">{{product | price}}
+        <span
+        *ngIf="product?.discountInfo"
+        >{{product.discountInfo.percentage}}</span>
+      </div>
+      <div *ngIf="product?.discountInfo" class="descuento">
+        {{product.discountInfo.originalPrice}}
+      </div>
+  </div>
+</div>
