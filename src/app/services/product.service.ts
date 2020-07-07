@@ -35,7 +35,7 @@ export class ProductService {
                     this.productChangeObs.next(_);
                     this.log('fetched Product');
                 }),
-                catchError(this.handleError < PageResponse > ('findByText', null))
+                catchError(this.handleError < PageResponse > ('findByText', new PageResponse()))
             );
     }
 
@@ -46,7 +46,7 @@ export class ProductService {
                     this.productChangeObs.next(_);
                     this.log('fetched Product');
                 }),
-                catchError(this.handleError < PageResponse > ('findById', null))
+                catchError(this.handleError < PageResponse > ('findById', new PageResponse()))
             );
     }
 

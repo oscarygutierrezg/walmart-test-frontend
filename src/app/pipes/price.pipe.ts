@@ -8,7 +8,7 @@ export class PricePipe implements PipeTransform {
 
   transform(value: Product): string {
     if (value.discountInfo) {
-      return value.discountInfo.originalPrice;
+      return value.discountInfo.priceWithDiscount;
     }
     return value.originalPrice;
   }

@@ -12,6 +12,7 @@ import { PricePipe } from 'src/app/pipes/price.pipe';
 import { Subject, Observable } from 'rxjs';
 import { ProductService } from 'src/app/services/product.service';
 import { PageResponse } from 'src/app/model/page-response';
+import { By } from '@angular/platform-browser';
 
 const  response = new PageResponse();
 
@@ -166,6 +167,24 @@ describe('HomeComponent', () => {
   component.findById(1);
   expect(spy).toHaveBeenCalled();
 });
+
+it('should create findProducts', () => {
+  const spy = spyOn(console, 'log');
+  component.findById(1);
+  expect(spy).toHaveBeenCalled();
+});
+
+it('should create findProducts', () => {
+
+serviceMock.findById(1)
+fixture.detectChanges();
+
+
+const title = fixture.debugElement.queryAll(By.css('img'));
+  expect(title.length).toBe(1);
+});
+
+
 
 
 
